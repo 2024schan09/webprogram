@@ -1,0 +1,44 @@
+#top 
+.header {
+  font-family: Arial;
+  font-size: 48px;
+}
+.image {
+    background-image:url("simon-zhu-4hluhoRJokI-unsplash-big.jpg"); 
+    background-size:cover;
+    height: 300px;
+    background-position: center;
+    position: relative;
+}
+
+a#sideButton {
+  text-decoration: none;
+  color: #fff;
+  background-color: #89181A;
+  font size: 24px;
+  font-family: Arial;
+  border-radius: 7px;
+  border: 1px solid #fff;
+  display: block; 
+  width: 300px;
+  height: 50px;
+  text-align: center;
+  position: relative; 
+}
+
+a#sideButton:hover {
+  color: #89181A; 
+  background-color:#fff;
+  border: 1px solid #89181a;
+}
+
+#content {
+  display: inline-block;
+  position: absolute;
+  top: 355px;
+  left: 320px;
+}
+.pageContent {
+  position:relative;
+  font-size: 24px;
+}
