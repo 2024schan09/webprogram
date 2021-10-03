@@ -1,8 +1,18 @@
 #top
 .header {
   position: fixed;
-  font-family: Courier New;
+  font-family: Courier;
   font-size: 60px;
+  font-style: italic;
+}
+
+.headerTag {
+  position: fixed;
+  font-family: Courier;
+  font-size: 16px;
+  font-style: italic;
+  left: 34%;
+  margin-top: 45px;
 }
 
 .banner{
@@ -15,7 +25,7 @@
 }
 
 .image {
-  background-image:url("simon-zhu-4hluhoRJokI-unsplash-big.jpg"); 
+  background-image:url("dannie-jing-3GZlhROZIQg-unsplash.jpg"); 
   background-size:100%;
   height: 400px;
   top: 120px;
@@ -23,6 +33,16 @@
   position: relative;
   border: 3px solid black;
   z-index: -2;
+}
+
+.imageText {
+  text-align: center;
+  position: absolute;
+  top: 40%;
+  left: 44%;
+  color: white;
+  font-family: Courier New;
+  font-size: 70px;
 }
 
 a#sideButton {
@@ -61,4 +81,9 @@ a#sideButton:hover {
 .pageContent {
   position:relative;
   font-size: 24px;
+}
+
+.contentHeader {
+  font-size: 28px;
+  font-style: italic;
 }
