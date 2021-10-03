@@ -27,6 +27,7 @@
 .image {
   background-image:url("dannie-jing-3GZlhROZIQg-unsplash.jpg"); 
   background-size: cover;
+  width: 100%;
   height: 400px;
   top: 120px;
   background-position: center;
@@ -52,7 +53,7 @@ a#sideButton {
   font-size: 18px;
   font-family: Courier New;
   display: inline-block; 
-  width: 33%;
+  width: 33.333333333333%;
   height: 30px;
   text-align: center;
   position: relative; 
