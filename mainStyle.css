@@ -16,7 +16,7 @@
 }
 
 .banner{
-  background-color: white;
+  background-color: #ffffff;
   position: fixed;
   height: 120px;
   background-position: center;
@@ -31,14 +31,14 @@
   top: 120px;
   background-position: center;
   position: relative;
-  border: 3px solid black;
+  border: 3px solid #000000;
   z-index: -2;
 }
 
 .imageText {
   top: 40%;
   left: 44%;
-  color: white;
+  color: #ffffff;
   font-family: Courier New;
   font-size: 70px;
   text-align: center;
@@ -48,7 +48,7 @@
 a#sideButton {
   text-decoration: none;
   color: #fff;
-  background-color: black;
+  background-color: #000000;
   font-size: 18px;
   font-family: Courier New;
   display: inline-block; 
@@ -59,13 +59,13 @@ a#sideButton {
   top: 70px;
   margin-bottom: 5px;
   padding-top: 10px;
-  border: 3px solid black;
+  border: 3px solid #000000;
 }
 
 a#sideButton:hover {
   position:fixed;
-  color: black; 
-  background-color:#fff;
+  color: #000000; 
+  background-color:#ffffff;
   z-index:0;
 }
 
