@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/css" href="styleRules.css"?>
+
+<songList>
+  <heading> Today's Song List: </heading>
+  <song>
+    <title> How You Like That </title>
+    <artist> BLACKPINK </artist>
+    <genre> K-Pop </genre>
+    <year> 2020 </year>
+  </song>
+  
+  <song>
+    <title> good 4 u </title>
+    <artist> Olivia Rodrigo </artist>
+    <genre> Pop </genre>
+    <year> 2021 </year>
+  </song>
+  
+  <song>
+    <title> Summer </title>
+    <artist> Calvin Harris </artist>
+    <genre> Dance </genre>
+    <year> 2014 </year>
+  </song>
+  
+  <song>
+    <title> Bad Habits </title>
+    <artist> Ed Sheeran </artist>
+    <genre> Pop </genre>
+    <year> 2021 </year>
+  </song>
+  
+  <song>
+    <title> New </title>
+    <artist> Daya </artist>
+    <genre> Pop </genre>
+    <year> 2017 </year>
+  </song>
+  
+  <song>
+    <title> DUMB DUMB </title>
+    <artist> SOMI </artist>
+    <genre> K-Pop </genre>
+    <year> 2021 </year>
+  </song>
+  
+  <song>
+    <title> MONTERO (Call Me By Your Name) </title>
+    <artist> Lil Nas X </artist>
+    <genre> Pop </genre>
+    <year> 2021 </year>
+  </song>
+  
+  <song>
+    <title> I Don't Care </title>
+    <artist> Ed Sheeran, Justin Bieber </artist>
+    <genre> Pop </genre>
+    <year> 2019 </year>
+  </song>
+  
+  <song>
+    <title> Willy Wonka </title>
+    <artist> Macklemore, Offset </artist>
+    <genre> Hip-hop/Rap </genre>
+    <year> 2017 </year>
+  </song>
+  
+  <song>
+    <title> Holding Out for a Hero </title>
+    <artist> Bonnie Tyler </artist>
+    <genre> Rock, Pop </genre>
+    <year> 1986 </year>
+  </song>
+</songList>
