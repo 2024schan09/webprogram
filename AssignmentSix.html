@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title> Assignment 6: Amicable Numbers </title>
+  </head>
+<body style="font-size: 24px; font-family: Verdana;"> 
+  <h1> Amicable Number Checker </h1>
+  <p> Please enter two numbers to check if they are amicable! </p>
+  <form style="font-size: 20px">
+    First number: <br> <input type="text" id="first"> <br> <br>
+    Second number: <br> <input type="text" id="second"> <br> <br>
+    <input type="button" value="Submit" onclick="document.getElementById('final').innerHTML = main()"> <br>
+    <p> <div id="final"> </div> </p>
+  </form>
+  <script language="javascript">
+      function main() {
+          var first = document.getElementById("first").value;
+          var second = document.getElementById("second").value;
+          
+          firstArr = checkFactor(first);
+          secondArr = checkFactor(second);
+          
+          popupFactor(firstArr, first);
+          popupFactor(secondArr, second);
+          
+          firstSum = addFactor(firstArr);
+          secondSum = addFactor(secondArr);
+          
+          return isAmicable(firstSum, secondSum, first, second);
+      }
+      
+      function checkFactor(number) {
+          var arr = [];
+          for (i = 1; i < number; i++) {
+              if (number % i == 0) {
+                  arr.push(i);
+              }
+          }
+          return arr;
+      }
+      
+      function popupFactor(array, number) {
+          var factors = "";
+          for (i = 0; i < array.length; i++) {
+              factors += (array[i] + " "); 
+          }
+          alert("The factors of " + number + ": " + factors);
+      }
+      
+      function addFactor(array) {
+          var sum = 0;
+          for (i = 0; i < array.length; i++) {
+              sum += array[i];
+          }
+          return sum;
+      }
+      
+      function isAmicable(firstSum, secondSum, first, second) {
+          if ((firstSum == second) && (secondSum == first)) {
+              return "The numbers: " + first + " and " + second + " are amicable.";
+          } else {
+              return "The numbers: " + first + " and " + second + " are not amicable.";
+          }
+      }
+  </script>
+</body>
+</html>
