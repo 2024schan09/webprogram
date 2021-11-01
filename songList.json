@@ -1,0 +1,64 @@
+songList = {
+   "songs": [
+      {
+        "title": "How You Like That",
+        "artist": "BLACKPINK",
+        "genre": ["K-Pop", "Trap", "Electronic"],
+        "year": 2020
+      },
+      {
+        "title": "good 4 u",
+        "artist": "Olivia Rodrigo",
+        "genre": ["Pop", "Rock", "Emo"],
+        "year": 2021
+      },
+      {
+        "title": "Summer",
+        "artist": "Calvin Harris",
+        "genre": ["Dance", "Pop", "Electronic"],
+        "year": 2014
+      },
+      {
+        "title": "Bad Habits",
+        "artist": "Ed Sheeran",
+        "genre": ["Pop", "Hip-hop/Rap", "Electronic"],
+        "year": 2021
+      },
+      {
+        "title": "New",
+        "artist": "Daya",
+        "genre": ["Pop", "Synthpop", "Electronic"],
+        "year": 2017
+      },
+      {
+        "title": "Something Just Like This",
+        "artist": "The Chainsmokers",
+        "genre": ["Pop", "Electronic", "Dance"],
+        "year": 2021
+      },
+      {
+        "title": "MONTERO (Call Me By Your Name)",
+        "artist": "Lil Nas X",
+        "genre": ["Pop", "Hip-hop/Rap", "Electropop"],
+        "year": 2021
+      },
+      {
+        "title": "I Don't Care",
+        "artist": "Ed Sheeran, Justin Bieber",
+        "genre": ["Pop", "Electropop", "Dancehall"],
+        "year": 2019
+      },
+      {
+        "title": "Uma Thurman",
+        "artist": "Fall Out Boy",
+        "genre": ["Rock", "Pop", "Alternative"],
+        "year": 2017
+      },
+      {
+        "title": "Holding Out for a Hero",
+        "artist": "Bonnie Tyler",
+        "genre": ["Rock", "Pop", "Country"],
+        "year": 1986
+      }
+  ]
+}

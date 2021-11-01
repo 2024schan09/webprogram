@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+	<title> Assignment 9: JSON Song List </title>
+</head>
+<body>
+	<script type="text/javascript" src="songList.json">  </script>
+	<h1> Today's Song List: </h1>
+  <h3> Serialized data: </h2>
+  <script type="text/javascript"> 
+  
+  list = JSON.stringify(songList);
+  document.write(list);
+	
+	</script>
+	<script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+	<script> 
+	$(document).ready(function() {
+			$('#list').show();
+			$('#submit').click(function() {
+					select = document.getElementById("filter");
+					selection = select.value;
+					total = "";
+					$('#songlist').html(total);
+					
+					if (selection != "All Genres") {
+							total += "<br>"
+							for (i = 0; i < 10; i++) {
+									for (j = 0; j < 3; j++) {
+											if (songList.songs[i].genre[j] == selection) {
+													total += songList.songs[i].title;
+													total += "<br>Artist: " + songList.songs[i].artist + "<br>";
+							
+													total += "Genre: ";
+													for (k = 0; k < 3; k++) {
+															total += songList.songs[i].genre[k];
+															if (k != 2) {
+																	total += ", ";
+															}
+													}
+													total += "<br>Released " + songList.songs[i].year + "<br><br>";
+											}	
+									}
+							}
+							$('#list').hide();
+							$('#songlist').html(total);
+					} else {
+							$('#list').show();
+					}
+			});
+	})
+	</script>
+  <br> <br>
+	<form>
+			<select name="filter" id="filter" size='1'>
+					<option value="All Genres"> All Genres </option>
+					<option value="Alternative"> Alternative </option>
+					<option value="Country"> Country </option>
+					<option value="Dance"> Dance </option>
+					<option value="Dancehall"> Dancehall </option>
+					<option value="Electronic"> Electronic </option>
+					<option value="Electropop"> Electropop </option>
+					<option value="Emo"> Emo </option>
+					<option value="Hip-hop/Rap"> Hip-hop/Rap </option>
+					<option value="K-Pop"> K-Pop </option>
+					<option value="Pop"> Pop </option>
+					<option value="Rock"> Rock </option>
+					<option value="Synthpop"> Synthpop </option>
+					<option value="Trap"> Trap </option>
+			</select>		
+			<input type="button" value="Filter" id="submit"/>
+	</form>
+	<div id="songlist"> </div>
+	<div id="list">
+	<script language"javascript"> 
+			for (i = 0; i < 10; i++) {
+					document.write("<br>" + songList.songs[i].title);
+					document.write("<br>Artist: " + songList.songs[i].artist + "<br>");
+			
+					document.write("Genre: ");
+					for (j = 0; j < 3; j++) {
+							document.write(songList.songs[i].genre[j]);
+							if (j != 2) {
+									document.write(", ");
+							}
+					}
+					document.write("<br>Released " + songList.songs[i].year + "<br>");		
+			}
+	</script>
+	</div>
+</body>
+</html>
