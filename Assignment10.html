@@ -40,6 +40,7 @@
 							} else if (request.readyState == 3) {
 									document.getElementById("data").innerHTML = "Please check the logs!";
 						}
+						document.getElementById("header4").innerHTML = "Last Updated: " + covidData["lastUpdatedAtSource"] + "<br>";
 				}
 				request.send();
 				console.log("4 - Request has been sent.");
@@ -48,6 +49,7 @@
 </head>
 <body onload="getData()">
 	<h1> Coronavirus Update in the United States of America </h1>
+	<h4 id="header4"> </h4> 
 	<div id="data"> Loading... </div>
 	<p style="text-decoration: underline;"> Questions </p>
 	<p> For this assignment, I have selected a coronavirus data tracker API for USA.
@@ -58,19 +60,10 @@
 			https://www.cdc.gov/coronavirus/2019-ncov/cases-in-us.html</a>. <br> API Data: 
 			<a href="https://api.apify.com/v2/key-value-stores/moxA3Q0aZh5LosewB/records/LATEST?disableRedirect=true">
 			https://api.apify.com/v2/key-value-stores/moxA3Q0aZh5LosewB/records/LATEST?disableRedirect=true </a> </p>
-	<p> Some of the options that this API had was the total number of cases, total number of deaths,
-			and each state's name, its total number of cases, and the range of cases. I used all the data
-			provided in the API except for the range of the number of cases in each state. I feel like 
-			what's important for users to know is the total number of cases and deaths. However, 
-			the range may be something that medical websites want to use.
+	<p> Some of the options that this API had were the total number of cases, the total number of deaths, and each state's name, its total number of cases, and the range of cases. I used all the data provided in the API except for the range of the number of cases in each state. I feel like it’s important for users to know is the total number of cases and deaths. However, the range may be something that medical websites want to use. I also used the "lastUpdatedAtSource" option, as it will let users know how accurate the data is.
 	</p>
-	<p> With the pandemic still affecting our everyday lives, it's important for people
-			to be aware of the current situation with the coronavirus. With this data, 
-			people can easily find data about the total cases in USA, and also in the
-			specific state that they live in. This API can definitely be used in medical
-			or hospital websites since their top priority is to help those who are affected
-			by the coronavirus. This API can also be used in news articles that talk about
-			coronavirus updates. The news is another platform that can spread information about the
-			pandemic to the general public. </p>
+	<p> With the pandemic still affecting our everyday lives, it's important for people to be aware of the current situation with the coronavirus. With this data, people can easily find data about the total cases in USA, and also in the specific state that they live in. This API can definitely be used in medical or hospital websites since their top priority is to help those who are affected by the coronavirus. This API can also be used in news articles that talk about coronavirus updates. The news is another platform that can spread information about the
+pandemic to the general public.
+ </p>
 </body>
 </html>
