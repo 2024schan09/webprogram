@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8"/>
+<title> Assignment 10: API Fun </title>
+<style type="text/css">
+		body {
+			font-family: Times;
+		}
+		
+		p {
+			font-family: Courier;
+		}
+</style>
+<script>
+		function getData() {
+				request = new XMLHttpRequest();
+				console.log("1 - Request object has been created.");
+	 	 
+				request.open("GET", "https://api.apify.com/v2/key-value-stores/moxA3Q0aZh5LosewB/records/LATEST?disableRedirect=true", true);
+				console.log("2 - Request file has been opened.");
+	 
+				request.onreadystatechange = function() {
+						console.log("3 - The 'readystatechange' event has been executed.");
+		 
+						if (request.readyState == 4 && request.status == 200) {
+									console.log("5 - Response has been received.");
+									result = request.responseText;
+									covidData = JSON.parse(result);
+									
+									document.getElementById("data").innerHTML = "Total Cases: " + covidData["totalCases"] + "<br>";
+									document.getElementById("data").innerHTML += "Total Deaths: " + covidData["totalDeaths"] + "<br><br>"; 
+
+									for (i = 0; i < covidData["casesByState"].length; i++) {
+											document.getElementById("data").innerHTML += "State: " + covidData["casesByState"][i]["name"] + "<br>"; 
+											document.getElementById("data").innerHTML += "Cases Reported: " + covidData["casesByState"][i]["casesReported"] + "<br><br>"; 
+									}		
+							} else if (request.readyState == 4 && request.status != 200) {
+									document.getElementById("data").innerHTML = "Something went wrong!"
+							} else if (request.readyState == 3) {
+									document.getElementById("data").innerHTML = "Please check the logs!";
+						}
+				}
+				request.send();
+				console.log("4 - Request has been sent.");
+		}
+</script>
+</head>
+<body onload="getData()">
+	<h1> Coronavirus Update in the United States of America </h1>
+	<div id="data"> Loading... </div>
+	<p style="text-decoration: underline;"> Questions </p>
+	<p> For this assignment, I have selected a coronavirus data tracker API for USA.
+			It contains the total reported cases, the total reported deaths, as well as
+			the total reported cases in each state. </p>
+	<p> Source: <a href="https://apify.com/covid-19">https://apify.com/covid-19</a>,
+			who gathers their data from <a href="https://www.cdc.gov/coronavirus/2019-ncov/cases-in-us.html">
+			https://www.cdc.gov/coronavirus/2019-ncov/cases-in-us.html</a>. <br> API Data: 
+			<a href="https://api.apify.com/v2/key-value-stores/moxA3Q0aZh5LosewB/records/LATEST?disableRedirect=true">
+			https://api.apify.com/v2/key-value-stores/moxA3Q0aZh5LosewB/records/LATEST?disableRedirect=true </a> </p>
+	<p> Some of the options that this API had was the total number of cases, total number of deaths,
+			and each state's name, its total number of cases, and the range of cases. I used all the data
+			provided in the API except for the range of the number of cases in each state. I feel like 
+			what's important for users to know is the total number of cases and deaths. However, 
+			the range may be something that medical websites want to use.
+	</p>
+	<p> With the pandemic still affecting our everyday lives, it's important for people
+			to be aware of the current situation with the coronavirus. With this data, 
+			people can easily find data about the total cases in USA, and also in the
+			specific state that they live in. This API can definitely be used in medical
+			or hospital websites since their top priority is to help those who are affected
+			by the coronavirus. This API can also be used in news articles that talk about
+			coronavirus updates. The news is another platform that can spread information about the
+			pandemic to the general public. </p>
+</body>
+</html>
