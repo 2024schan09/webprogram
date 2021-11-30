@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="mainstyle.css">
+<style type="text/css">
+	/* Container needed to position the button. Adjust the width as needed */
+	.container {
+	  position: relative;
+	  width: 50%;
+		overflow: hidden;
+	}
+
+	/* Make the image responsive */
+	.container img {
+	  width: 100%;
+	  height: auto;
+		overflow: hidden;
+
+	}
+
+		/* Style the buttons that are used to open and close the accordion panel */
+	.accordion {
+	  background-color: #eee;
+	  color: #444;
+	  cursor: pointer;
+	  padding: 18px;
+	  width: 100%;
+	  text-align: left;
+	  border: none;
+	  outline: none;
+	  transition: 0.4s;
+		overflow: hidden;
+	}
+
+	/* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
+	.active, .accordion:hover {
+	  background-color: #ccc;
+	}
+
+	/* Style the accordion panel. Note: hidden by default */
+	.panel {
+		padding: 0 18px;
+		background-color: white;
+		max-height: 0;
+		overflow: hidden;
+		transition: max-height 0.2s ease-out;
+	}
+
+</style> 
+</head>
+<body>
+	<div class="header">
+	  <h2>Confucianism </h2>
+	  <!-- <p> A Virtual Confucian House </p> -->
+	</div>
+	<div class="topnav">
+	  <a href="home.html"> I - Introduction to Confucian Aesthetics </a>
+		<a href="virtual.html"> II - A Virtual Confucian House</a>
+	  <a href="choson.html">III - Confucianism In Choson Dynasty</a>
+	  <a href="women.html">IV - Women In Confucian Society</a>
+	</div>
+	<div class="content">
+	  <h3> II - A Virtual Confucian House </h3>
+		<!-- <div class="text"> <br> 1. Living Room <br> 2. Study Room <br> 3. Bedroom <br> 4. Kitchen <br> 5. Bathroom <br> 6. Tea Room </div> -->
+
+	  <div class="container">
+		  <img src="624817.fig.0011a.jpg" alt="blueprint" usemap="#housemap" width="680" height="550">
+
+			<map name="housemap">
+				<!-- Room 1 -->
+			<area shape="rect" coords="0,0,310,300" alt="Living" href="#" onclick="myFunction()">
+				<!-- Room 2 -->
+			<area shape="rect" coords="310,0,480,300" alt="Study" href="#">
+				<!-- Room 3 -->
+			<area shape="rect" coords="480,0,680,300" alt="Bedroom" href="#">
+				<!-- Room 4 -->
+			<area shape="rect" coords="0,310,310,550" alt="Kitchen" href="#">
+				<!-- Room 5 -->
+			<area shape="rect" coords="310,380,450,550" alt="Bathroom" href="#" onclick="myFunction()">
+				<!-- Room 6 -->
+			<area shape="rect" coords="450,380,680,550" alt="Tea" href="#" onclick="myFunction()">
+
+			</map>
+		  <!-- <button class="btn"> <div class="study"> Study Room </div> </button> -->
+		</div>
+
+		<button class="accordion">Section 1</button>
+		<div class="panel">
+		  <p>Lorem ipsum...</p>
+		</div>
+
+		<button class="accordion">Section 2</button>
+		<div class="panel">
+		  <p>Lorem ipsum...</p>
+		</div>
+
+		<button class="accordion">Section 3</button>
+		<div class="panel">
+		  <p>Lorem ipsum...</p>
+		</div>
+		
+		<button class="accordion">Section 4</button>
+		<div class="panel">
+		  <p>Lorem ipsum...</p>
+		</div>
+		
+		<button class="accordion">Section 5</button>
+		<div class="panel">
+		  <p>Lorem ipsum...</p>
+		</div>
+		
+		<button class="accordion">Section 6</button>
+		<div class="panel">
+		  <p>Lorem ipsum...</p>
+		</div>
+	</div>
+	
+	<script>
+	var acc = document.getElementsByClassName("accordion");
+	var i;
+
+	for (i = 0; i < acc.length; i++) {
+	  acc[i].addEventListener("click", function() {
+	    this.classList.toggle("active");
+	    var panel = this.nextElementSibling;
+	    if (panel.style.maxHeight) {
+	      panel.style.maxHeight = null;
+	    } else {
+	      panel.style.maxHeight = panel.scrollHeight + "px";
+	    }
+	  });
+	}
+	
+	function myFunction() {
+  		alert("You clicked the coffee cup!");
+	}
+	</script>
+	
+	<div class="block">
+	<a href="choson.html">Next</a> </div>
+</body>
+</html>
